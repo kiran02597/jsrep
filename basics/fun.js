@@ -10,6 +10,5 @@ printname("kiran");
 
     console.log(name, "is good guy");
 
-    
 }
 
