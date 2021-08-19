@@ -18,3 +18,28 @@ do  {
     console.log(i);
     i++;
 } while(i<10) ;
+
+for(;;);
+states.forEach(i => console.log(i));
+
+const smedia = ["youtube","facebook","instagram","netflix"];
+//for of
+for (const n of smedia) {
+    console.log(n);
+}
+const mystates= {
+    ts:"telangana",
+    kl: "kerala",
+    ka:"karnataka"
+
+}
+   
+for(const n in mystates) {
+    console.log(n);
+}
+for(const n in mystates) {
+    console.log(mystates[n]);
+}
+for(const n in mystates) {
+    console.log(`KEYS ARE : ${n} and values are : ${mystates[n]}`);
+}
