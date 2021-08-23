@@ -21,12 +21,13 @@ do  {
 
 for(;;);
 states.forEach(i => console.log(i));
-
+//list
 const smedia = ["youtube","facebook","instagram","netflix"];
 //for of
 for (const n of smedia) {
     console.log(n);
 }
+//obj
 const mystates= {
     ts:"telangana",
     kl: "kerala",
