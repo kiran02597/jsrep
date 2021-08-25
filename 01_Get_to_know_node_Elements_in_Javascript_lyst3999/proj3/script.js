@@ -1,0 +1,59 @@
+const courses = [
+    {
+        name : "js",
+        price : "22"
+    },
+    {
+        name : "angular",
+        price : "5"
+    },
+    {
+        name : "react",
+        price : "10"
+    },
+    {
+        name : "mern",
+        price : "2"
+    }
+];
+
+function generateList() {
+const ul = document.querySelector(".list-group")
+ul.innerHTML ="";
+    courses.forEach(courses => {
+        const li = document.createElement("li");
+        li.classList.add("list-group-item");
+
+        const name = document.createTextNode(courses.name);
+        li.appendChild(name);
+
+        const span = document.createElement("span");
+        span.classList.add("float-right");
+        const price = document.createTextNode("$" + courses.price);
+        span.appendChild(price);
+
+        li.appendChild(span);
+
+        ul.appendChild(li);
+
+    });
+
+};
+
+//generateList();
+
+window.addEventListener("load",generateList);
+
+// const button = document.querySelector(".sort-btn");
+// button.addEventListener("click", () =>{
+//     courses.sort((a,b) => a.price-b.price);
+//     generateList()
+
+// });
+
+const button = document.querySelector(".sort-btn-desc");
+button.addEventListener("click", () =>{
+    courses.sort((a,b) => b.price-a.price);
+    generateList()
+
+})
